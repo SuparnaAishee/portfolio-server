@@ -4,7 +4,7 @@ import httpStatus from 'http-status';
 import jwt, { JwtPayload } from 'jsonwebtoken';
 import config from '../config';
 import { User } from '../modules/user/user.model';
-import { TUserRole } from '../modules/user/user.interface';
+import { TUserRole } from '../modules/userInfo/user.interface';
 
 const auth = (...requiredRole: TUserRole[]) => {
   return catchAsync(async (req, res, next) => {

@@ -8,6 +8,7 @@ import {  notFoundHandler } from './app/middlewares/handle.error';
 
 import { ProjectRoutes } from './app/modules/projects/Project.route';
 import { ArittraInfoRouters } from './app/modules/userInfo/userInfo.route';
+import router from './app/routes';
 const app = express();
 
 app.use(
@@ -17,7 +18,8 @@ app.use(
 );
 //parser for json
 app.use(express.json());
-
+/* Module routes */
+app.use('/api', router);
 app.use('/api/projects', ProjectRoutes);
 app.use('/api/arittrainfo',ArittraInfoRouters)
 // app.use('/api/orders', OrderRoutes);

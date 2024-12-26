@@ -6,8 +6,8 @@ import config from '../config';
 import { ZodError } from 'zod';
 import handleZodError from '../errors/handleZodError';
 import handleValidationError from '../errors/handleValidationError';
-import handleCastError from '../errors/handleCastError';
-import handleDuplicateError from '../errors/handleDuplicateError';
+import handleCastError from '../errors/HandleCastError';
+import handleDuplicateError from '../errors/HandleDupicateError';
 import AppError from '../errors/AppError';
 
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
