@@ -3,6 +3,7 @@ import { z } from 'zod';
 export const projectValidationSchema = z.object({
   title: z.string().min(1, 'Title is required').max(100, 'Title is too long'),
   description: z.string().min(1, 'Description is required'),
+  subDescription: z.string().min(1, 'Description is required'),
   techStack: z.array(z.string()).min(1, 'At least one technology is required'),
   category: z.string().min(1, 'Category is required'), // Category validation
   demoUrl: z.string().url('Demo URL must be a valid URL').optional(),

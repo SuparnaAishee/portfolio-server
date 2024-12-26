@@ -5,8 +5,9 @@ import express, { Request, Response } from 'express';
 import {  notFoundHandler } from './app/middlewares/handle.error';
 
  import cors from 'cors';
-import { ArittraInfoRouters } from './app/modules/arittraInfo/ArittraInfo.route';
+
 import { ProjectRoutes } from './app/modules/projects/Project.route';
+import { ArittraInfoRouters } from './app/modules/userInfo/userInfo.route';
 const app = express();
 
 app.use(
